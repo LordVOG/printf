@@ -4,30 +4,52 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <starg.h>
+#include <stdarg.h>
 #include <stddef.h>
 #include <math.h>
+#include <unistd.h>
 
 /**
   * struct fmt_type - structure rep the format types
-  * @fmt_spec: format specifier for each format symbol
-  * @func_spec: function pointer that print a data type
+  * @fsc: format specifier for each format symbol
+  * @func: function pointer that print a data type
   * corresponding to the fmt_spec symbol
   */
 typedef struct fmt_type
 {
-	char fmt_spec;
-	int (*func_spf)(va_list arg_param);
+	char *fsc;
+	int (*func)(va_list);
 } f_type;
 
 /** Fucntion prototypes **/
 int _printf(const char *format, ...);
+int _putchar(char c);
 
 /** Format Specifier function prototypes **/
-int p_char(va_list arg_param);
+int print_schar(va_list c);
 
-int p_str(va_list arg_param);
+int print_dec(va_list d);
 
-int p_int(va_list arg_param);
+int print_exp(va_list e);
+
+int print_flt(va_list f);
+
+int print_str(va_list s);
+
+int print_int(va_list i);
+
+int print_oct(va_list o);
+
+int print_undec(va_list u);
+
+int print_lhex(va_list x);
+
+int print_uhex(va_list X);
+
+int print_bin(va_list b);
+
+int print_rev(va_list r);
+
+int print_rot13(va_list R);
 
 #endif
