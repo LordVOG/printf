@@ -21,9 +21,13 @@ typedef struct fmt_type
 	int (*func)(va_list);
 } f_type;
 
+
+
 /** Fucntion prototypes **/
 int _printf(const char *format, ...);
 int _putchar(char c);
+
+
 
 /** Format Specifier function prototypes **/
 int print_schar(va_list c);
