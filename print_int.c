@@ -28,7 +28,7 @@ int print_int(va_list i)
 		powten = 1;
 		for (index = 1; index <= length - 1; index++)
 			powten = powten * 10;
-		for (index = 1; index < length; index++)
+		for (index = 1; index <= length; index++)
 		{
 			digit = n / powten;
 
