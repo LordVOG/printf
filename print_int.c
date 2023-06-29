@@ -44,7 +44,7 @@ int print_int(va_list i)
 	else
 	{
 		_putchar('0');
-		return (0);
+		return (1);
 	}
 	return (count);
 }

@@ -13,7 +13,6 @@ int (*find_format(const char *format))(va_list)
 	f_type specifiers[] = {
 		{"c", print_schar},
 		{"d", print_dec},
-		{"f", print_float},
 		{"s", print_str},
 		{"i", print_int},
 		{"o", print_octal},
@@ -44,11 +43,11 @@ int (*find_format(const char *format))(va_list)
 int _printf(const char *format, ...)
 {
 	va_list ap;
-	unsigned int index, cprint = 0;
+	unsigned int index = 0, cprint = 0;
 	int (*func)(va_list);
 
 	if (format == NULL)
-		return (1);
+		return (-1);
 
 	va_start(ap, format);
 	while (format[index])
@@ -56,8 +55,8 @@ int _printf(const char *format, ...)
 		if (format[index] != '%' && format[index])
 		{
 			_putchar(format[index]);
-			index++;
 			cprint++;
+			index++;
 		}
 		if (format[index] == '\0')
 			return (cprint);
@@ -70,7 +69,7 @@ int _printf(const char *format, ...)
 			continue;
 		}
 		if (!format[index + 1])
-			return (1);
+			return (-1);
 		_putchar(format[index]);
 		cprint++;
 		if (format[index + 1] == '%')

@@ -38,13 +38,13 @@ int print_hex(unsigned int n, unsigned int c)
 				_putchar(digit + '0' + diff);
 			count++;
 			n = n - digit * powten;
-			powten / 16;
+			powten = powten / 16;
 		}
 	}
 	else
 	{
 		_putchar('0');
-		return (0);
+		return (1);
 	}
 	return (count);
 }

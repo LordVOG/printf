@@ -18,25 +18,25 @@ int print_octal(va_list o)
 		length = 0;
 		while (num != 0)
 		{
-			num = num / 10;
+			num = num / 8;
 			length++;
 		}
 		powten = 1;
 		for (index = 1; index <= length - 1; index++)
-			powten = powten * 10;
+			powten = powten * 8;
 		for (index = 1; index <= length; index++)
 		{
 			digit = n / powten;
 			_putchar(digit + '0');
 			count++;
-			n = n - digit * powten;
-			powten = powten / 10;
+			n = (n - digit) * powten;
+			powten = powten / 8;
 		}
 	}
 	else
 	{
 		_putchar('0');
-		return (0);
+		return (1);
 	}
 	return (count);
 }

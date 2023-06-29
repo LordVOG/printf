@@ -8,7 +8,7 @@
   */
 int print_bin(va_list b)
 {
-	int index, n, length, powten, digit, num;
+	unsigned int index, n, length, powten, digit, num;
 	int count = 0;
 
 	n = va_arg(b, unsigned int);
@@ -36,7 +36,7 @@ int print_bin(va_list b)
 	else
 	{
 		_putchar('0');
-		return (0);
+		return (1);
 	}
 	return (count);
 }

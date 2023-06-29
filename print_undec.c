@@ -8,7 +8,7 @@
  */
 int print_undec(va_list u)
 {
-	int index, n, length, powten, digit, num;
+	unsigned int index, n, length, powten, digit, num;
 	int count = 0;
 
 	n = va_arg(u, unsigned int);
@@ -29,14 +29,14 @@ int print_undec(va_list u)
 			digit = n / powten;
 			_putchar(digit + '0');
 			count++;
-			n = n - digit * powten;
+			n = (n - digit) * powten;
 			powten = powten / 10;
 		}
 	}
 	else
 	{
 		_putchar('0');
-		return (0);
+		return (1);
 	}
 	return (count);
 }

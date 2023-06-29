@@ -12,7 +12,7 @@ int print_schar(va_list c)
 
 	my_char = va_arg(c, int);
 	_putchar(my_char);
-	return (0);
+	return (1);
 }
 
 /**
@@ -23,5 +23,5 @@ int print_schar(va_list c)
 int print_percentage(void)
 {
 	_putchar('%');
-	return (0);
+	return (1);
 }

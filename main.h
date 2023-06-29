@@ -15,7 +15,7 @@
   * @func: function pointer that print a data type
   * corresponding to the fmt_spec symbol
   */
-typedef struct fmt_type
+typedef struct code_format
 {
 	char *fsc;
 	int (*func)(va_list);
@@ -33,8 +33,6 @@ int _putchar(char c);
 int print_schar(va_list c);
 
 int print_dec(va_list d);
-
-int print_float(va_list f);
 
 int print_str(va_list s);
 
@@ -54,4 +52,4 @@ int print_rev(va_list r);
 
 int print_rot13(va_list R);
 
-#endif
+#endif  /** MAIN_H **/
