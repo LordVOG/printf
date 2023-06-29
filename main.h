@@ -34,8 +34,6 @@ int print_schar(va_list c);
 
 int print_dec(va_list d);
 
-int print_exp(va_list e);
-
 int print_float(va_list f);
 
 int print_str(va_list s);

@@ -13,7 +13,6 @@ int (*find_format(const char *format))(va_list)
 	f_type specifiers[] = {
 		{"c", print_schar},
 		{"d", print_dec},
-		{"e", print_exp},
 		{"f", print_float},
 		{"s", print_str},
 		{"i", print_int},
