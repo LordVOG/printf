@@ -3,55 +3,47 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include <stdarg.h>
-#include <stddef.h>
-#include <math.h>
-#include <unistd.h>
+
+/** utils.c **/
+int _strlen(const char *);
+int print(char *);
+char *itoa(long int, int);
+
+/** printf.c **/
+int _printf(const char *, ...);
+
+/** handler.c **/
+int handler(const char *, va_list);
+int percent_handler(const char *, va_list, int *);
+
+/** _putchar.c **/
+int _putchar(char);
+int buffer(char);
+
+/** printers **/
+int print_string(va_list);
+int print_char(va_list);
+int print_integer(va_list);
+int print_binary(va_list);
+int print_rot(va_list);
+int print_unsigned(va_list);
+int print_octal(va_list);
+int print_hexadecimal_low(va_list);
+int print_hexadecimal_upp(va_list);
+int print_pointer(va_list);
+int print_rev_string(va_list);
 
 /**
-  * struct fmt_type - structure rep the format types
-  * @fsc: format specifier for each format symbol
-  * @func: function pointer that print a data type
-  * corresponding to the fmt_spec symbol
-  */
-typedef struct fmt_type
+ * struct _format - format structure
+ * @type: Format type
+ * @f: Associated function
+ */
+typedef struct _format
 {
-	char *fsc;
-	int (*func)(va_list);
-} f_type;
+	char type;
+	int (*f)(va_list);
+} format;
 
 
-
-/** Fucntion prototypes **/
-int _printf(const char *format, ...);
-int _putchar(char c);
-
-
-
-/** Format Specifier function prototypes **/
-int print_schar(va_list c);
-
-int print_dec(va_list d);
-
-int print_float(va_list f);
-
-int print_str(va_list s);
-
-int print_int(va_list i);
-
-int print_octal(va_list o);
-
-int print_undec(va_list u);
-
-int print_lwhex(va_list x);
-
-int print_uphex(va_list X);
-
-int print_bin(va_list b);
-
-int print_rev(va_list r);
-
-int print_rot13(va_list R);
-
-#endif
+#endif /** MAIN_H **/
