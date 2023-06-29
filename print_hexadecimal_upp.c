@@ -4,7 +4,8 @@ int is_lowercase(char);
 char *string_to_upper(char *);
 
 /**
- * print_hexadecimal_upp - Print number in hexadecimal uppercase format eg. 0X23EDR
+ * print_hexadecimal_upp - Print number in hexadecimal
+ * uppercase format eg. 0X23EDR
  * @list: Number list
  *
  * Return: Number length in uppercase

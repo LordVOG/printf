@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- * print_hexadecimal_low - print number in hexadecimal lowercase format eg. 0x23ae
+ * print_hexadecimal_low - print number in hexadecimal
+ * lowercase format eg. 0x23ae
  * @list: Number list
  *
  * Return: Number length

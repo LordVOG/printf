@@ -32,7 +32,7 @@ int rot13(char *s)
 }
 
 /**
- * print_rot - print rot13 string 
+ * print_rot - print rot13 string
  * @list: Argument string list
  *
  * Return: Length of string encoded
