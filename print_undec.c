@@ -8,7 +8,8 @@
  */
 int print_undec(va_list u)
 {
-	int index, n, length, powten, digit, num, count = 0;
+	int index, n, length, powten, digit, num;
+	int count = 0;
 
 	n = va_arg(u, unsigned int);
 	if (n != 0)

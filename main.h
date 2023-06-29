@@ -36,19 +36,19 @@ int print_dec(va_list d);
 
 int print_exp(va_list e);
 
-int print_flt(va_list f);
+int print_float(va_list f);
 
 int print_str(va_list s);
 
 int print_int(va_list i);
 
-int print_oct(va_list o);
+int print_octal(va_list o);
 
 int print_undec(va_list u);
 
-int print_lhex(va_list x);
+int print_lwhex(va_list x);
 
-int print_uhex(va_list X);
+int print_uphex(va_list X);
 
 int print_bin(va_list b);
 

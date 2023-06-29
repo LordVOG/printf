@@ -8,7 +8,8 @@
   */
 int print_bin(va_list b)
 {
-	int index, n, length, powten, digit, num, count = 0;
+	int index, n, length, powten, digit, num;
+	int count = 0;
 
 	n = va_arg(b, unsigned int);
 	if (n != 0)

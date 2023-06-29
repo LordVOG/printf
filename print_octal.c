@@ -6,9 +6,10 @@
  *
  * Return: success
  */
-int print_oct(va_list o)
+int print_octal(va_list o)
 {
-	int index, n, length, powten, digit, num, count = 0;
+	unsigned int index, n, length, powten, digit, num;
+	int count = 0;
 
 	n = va_arg(o, unsigned int);
 	if (n != 0)
