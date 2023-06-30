@@ -8,7 +8,7 @@
  */
 int flag_checker(char type)
 {
-	swith (type)
+	switch (type)
 	{
 		case '+':
 			return (1);
