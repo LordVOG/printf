@@ -22,6 +22,9 @@ int percent_handler(const char *, va_list, int *);
 int _putchar(char);
 int buffer(char);
 
+/** Flag Checker **/
+int flag_checker(char type);
+
 /** printers **/
 int print_string(va_list);
 int print_char(va_list);
