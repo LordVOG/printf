@@ -9,14 +9,25 @@
  */
 int print_non_printable(va_list list)
 {
-	char *print_buff;
-	int size;
+	int i = 0, length = 0;
+	char *buff;
 
-	print_buff = va_arg(list, char *);
-	if (print_buff == NULL)
-		print_buff = "(null)";
-	size = is_printable((print_buff != NULL) ? print_buff : "(null)");
+	buff = va_arg(list, char *);
 
-	return (size);
+	if (!buff)
+		return (print("(null)"));
+	while (buff[i])
+	{
+		if ((0 < buff[i] && buff[i] < 32) || buff[i] >= 127)
+		{
+			length += (buff[i] < 16) ? print("\\0x") : print("\\x");
+			i++;
+			continue;
+		}
+		length += _putchar(buff[i]);
+		i++;
+	}
+
+	return (length);
 }
-
+			

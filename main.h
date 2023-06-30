@@ -9,7 +9,6 @@
 /** utils.c **/
 int _strlen(const char *);
 int print(char *);
-int is_printable(char);
 char *itoa(long int, int);
 
 /** printf.c **/
