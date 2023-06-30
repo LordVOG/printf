@@ -25,6 +25,7 @@ int buffer(char);
 
 /** Flag Checker **/
 int flag_checker(char type);
+void window_sign(int flag, char ch, int j, va_list ap, int *pCount);
 
 /** printers **/
 int print_string(va_list);
