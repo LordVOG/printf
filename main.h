@@ -25,7 +25,6 @@ int buffer(char);
 
 /** Flag Checker **/
 int flag_checker(char type);
-void window_sign(int flag, char ch, int j, va_list ap, int *pCount);
 
 /** printers **/
 int print_string(va_list);
@@ -51,6 +50,20 @@ typedef struct _format
 	char type;
 	int (*f)(va_list);
 } format;
+
+/**
+ * struct flags - struct containing flags to "turn on"
+ * when a flag specifier is passed to _printf()
+ * @plus: flag for the '+' character
+ * @space: flag for the ' ' character
+ * @hash: flag for the '#' character
+ */
+typedef struct flags
+{
+	int plus;
+	int space;
+	int hash;
+} flags_t;
 
 
 #endif /** MAIN_H **/

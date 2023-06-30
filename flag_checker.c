@@ -1,95 +1,60 @@
 #include "main.h"
+
 /**
-*postive_sign - fun to print the + flag
-*@flag: flag to can overwide the flags
-*@ch: the + char
-*@j: the index of the argument
-*@ap: the copy of the argument list
-*@pCount: the count of the str
-*/
-void postive_sign(int flag, char ch, int j, va_list ap, int *pCount)
+ * flag_checker - check for associated flags
+ * @type: struct format type
+ *
+ * Return: flags
+ 
+int flag_checker(char type)
 {
-	if (flag < 2 || (j == 2 || j == 3 || j == 12))
+	switch (type)
 	{
-		if (ch == '+' && (j == 2 || j == 3 || j == 12))
-		{
-			if (va_arg(ap, int) >= 0 || j == 12)
-			{
-				_putchar('+');
-				*pCount += 1;
-			}
-		}
+		case '+':
+			return (1);
+		case ' ':
+			return (2);
+		case '#':
+			return (3);
+		case 'l':
+			return (4);
+		case 'h':
+			return (5);
+		default:
+			return (0);
 	}
-	else
-	{
-		window_sign(flag, '#', j, ap, pCount);
-	}
-}
+	return (0);
+}*/
+
+#include "main.h"
+
 /**
-*space_sign - fun to print the space flag
-*@flag: flag to can overwide the flags
-*@ch: the + char
-*@j: the index of the argument
-*@ap: the copy of the argument list
-*@pCount: the count of the str
-*/
-void space_sign(int flag, char ch, int j, va_list ap, int *pCount)
+ * get_flag - turns on flags if _printf finds
+ * a flag modifier in the format string
+ * @s: character that holds the flag specifier
+ * @f: pointer to the struct flags in which we turn the flags on
+ *
+ * Return: 1 if a flag has been turned on, 0 otherwise
+ */
+int get_flag(char s, flags_t *f)
 {
-	if ((ch == ' ' && (j == 2 || j == 3 || j == 12)) && flag == 0)
+	int i = 0;
+
+	switch (s)
 	{
-		if (va_arg(ap, int) >= 0 || j == 12)
-		{
-			_putchar(' ');
-			*pCount += 1;
-		}
-	}
-	else if (flag <= 2 && (j == 2 || j == 3 || j == 12))
-	{
-		_putchar('+');
-		*pCount += 1;
-	}
-	else if (flag == 2 && !(j == 2 || j == 3 || j == 12))
-	{
-		window_sign(flag, '#', j, ap, pCount);
+		case '+':
+			f->plus = 1;
+			i = 1;
+			break;
+		case ' ':
+			f->space = 1;
+			i = 1;
+			break;
+		case '#':
+			f->hash = 1;
+			i = 1;
+			break;
 	}
 
-}
-/**
-*window_sign - fun to print the windoflag
-*@flag: flag to can overwide the flags
-*@ch: the + char
-*@j: the index of the argument
-*@ap: the copy of the argument list
-*@pCount: the count of the str
-*/
-void window_sign(int flag, char ch, int j, va_list ap, int *pCount)
-{
-	if (va_arg(ap, int) != 0)
-	{
-		if (flag > 1 && !(j == 2 || j == 3 || j == 12))
-		{
-			if (ch == '#' && j == 7)
-			{
-				_putchar('0');
-				*pCount += 1;
-			}
-			else if (ch == '#' && j == 9)
-			{
-				_putchar('0');
-				_putchar('x');
-				*pCount += 2;
-			}
-			else if (ch == '#' && j == 10)
-			{
-				_putchar('0');
-				_putchar('X');
-				*pCount += 2;
-			}
-		}
-		else if (flag < 2 && (j == 2 || j == 3 || j == 12))
-		{
-			_putchar('+');
-			*pCount += 1;
-		}
-	}
+	return (i);
 }
