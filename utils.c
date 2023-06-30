@@ -30,3 +30,16 @@ int print(char *str)
 
 	return (indx);
 }
+
+/**
+  * is_printable - Check if a char is printable
+  * @c: Char to check
+  *
+  * Return: 1 if c is printable, else 0
+  */
+int is_printable(char c)
+{
+	if (c >= 32 && c < 127)
+		return (1);
+	return (0);
+}

@@ -9,6 +9,7 @@
 /** utils.c **/
 int _strlen(const char *);
 int print(char *);
+int is_printable(char);
 char *itoa(long int, int);
 
 /** printf.c **/
@@ -34,6 +35,7 @@ int print_hexadecimal_low(va_list);
 int print_hexadecimal_upp(va_list);
 int print_pointer(va_list);
 int print_rev_string(va_list);
+int print_non_printable(va_list);
 
 /**
  * struct _format - format structure
