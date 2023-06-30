@@ -32,14 +32,24 @@ int print(char *str)
 }
 
 /**
-  * is_printable - Check if a char is printable
-  * @c: Char to check
-  *
-  * Return: 1 if c is printable, else 0
-
-int is_printable(char c)
+ * convert_base - converts & prints a number into the given base
+ * @n: number to convert
+ * @base: base to use
+ * @c: char
+ *
+ * Return: length of the printed number
+ */
+int convert_base(unsigned long n, int base, char c)
 {
-	if (c >= 32 && c < 127)
-		return (1);
-	return (0);
-} */
+	int len = 0;
+
+	if (n / base)
+		len += convert_base(n / base, base, c);
+
+	if (n % base > 9)
+		len += _putchar(n % base + c);
+	else
+		len += _putchar((n % base) + '0');
+
+	return (len);
+}

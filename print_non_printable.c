@@ -21,6 +21,7 @@ int print_non_printable(va_list list)
 		if ((0 < buff[i] && buff[i] < 32) || 127 <= buff[i])
 		{
 			length += (buff[i] < 16) ? print("\\0x") : print("\\x");
+			length += convert_base(buff[i], 16, 55);
 			i++;
 			continue;
 		}

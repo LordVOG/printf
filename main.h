@@ -10,6 +10,7 @@
 int _strlen(const char *);
 int print(char *);
 char *itoa(long int, int);
+int convert_base(unsigned long n, int base, char c);
 
 /** printf.c **/
 int _printf(const char *, ...);
