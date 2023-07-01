@@ -13,6 +13,8 @@ In other words, the function receives a format (const char *format) and a list o
 
 ## Flowchart
 <img src="https://camo.githubusercontent.com/1135afb0d4b778d9c925a49f1ba82708891d7131e63c5ac2ef0b011ccf2aed5b/68747470733a2f2f692e696d6775722e636f6d2f536a71495573372e706e67"></img>
+<img src="https://camo.githubusercontent.com/2a968d8f3b973d45c5018a61f86ab3c669cdb37b6aedbc268fcf1e0a87f6977d/68747470733a2f2f692e696d6775722e636f6d2f6f7555683247342e706e67"></img>
+<img src="https://camo.githubusercontent.com/b5049ea69e1fa102d83af442b9ad5f7504c504bef23bc9558fc8b0e841b5693b/68747470733a2f2f692e696d6775722e636f6d2f393054527447482e706e67"></img>
 
 ## Contributors
 - [Nelson Ogunniran](github.com/lordvog)<br>
