@@ -1,5 +1,5 @@
 # Printf Project
-<img src="https://camo.githubusercontent.com/eaeb3da894b8f1e0f9de5aa206f12e2dd01c08c950b977359cee51648ea60147/68747470733a2f2f692e696d6775722e636f6d2f793739576944722e706e67"><i>The project prototype with format pointer and variadic function arguments</i></img>
+<img src="https://camo.githubusercontent.com/eaeb3da894b8f1e0f9de5aa206f12e2dd01c08c950b977359cee51648ea60147/68747470733a2f2f692e696d6775722e636f6d2f793739576944722e706e67"><i>The project prototype with format pointer and variadic function arguments</i></img><br>
 **Printf** is a C standard library widely used in C to print out information to the standard output. <br>
 This project is about creating our own version of printf (_printf) from scratch, reading through the processes, and developing our solution. The project was created on 24th June 2023.
 
